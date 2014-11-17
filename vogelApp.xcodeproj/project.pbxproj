@@ -14,6 +14,7 @@
 		E67ED3161A1A886400A45F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3151A1A886400A45F34 /* Images.xcassets */; };
 		E67ED3191A1A886400A45F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3171A1A886400A45F34 /* LaunchScreen.xib */; };
 		E67ED3251A1A886400A45F34 /* vogelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3241A1A886400A45F34 /* vogelAppTests.m */; };
+		E67ED32F1A1A957E00A45F34 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		E67ED31E1A1A886400A45F34 /* vogelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vogelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67ED3231A1A886400A45F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67ED3241A1A886400A45F34 /* vogelAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vogelAppTests.m; sourceTree = "<group>"; };
+		E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67ED32F1A1A957E00A45F34 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		E67ED2FC1A1A886400A45F34 = {
 			isa = PBXGroup;
 			children = (
+				E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */,
 				E67ED3071A1A886400A45F34 /* vogelApp */,
 				E67ED3211A1A886400A45F34 /* vogelAppTests */,
 				E67ED3061A1A886400A45F34 /* Products */,
@@ -412,6 +416,7 @@
 				E67ED32A1A1A886400A45F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E67ED32B1A1A886400A45F34 /* Build configuration list for PBXNativeTarget "vogelAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				E67ED32D1A1A886400A45F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
