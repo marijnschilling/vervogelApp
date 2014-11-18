@@ -1,0 +1,10 @@
+PODS:
+  - EEEManualLayout (0.1.2)
+
+DEPENDENCIES:
+  - EEEManualLayout (~> 0.1)
+
+SPEC CHECKSUMS:
+  EEEManualLayout: cacafc289718ec438686b339b9ac4388193e7fe4
+
+COCOAPODS: 0.34.4
