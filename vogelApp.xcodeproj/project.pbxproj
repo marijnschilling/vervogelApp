@@ -12,9 +12,11 @@
 		E67ED3111A1A886400A45F34 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3101A1A886400A45F34 /* RootViewController.m */; };
 		E67ED3141A1A886400A45F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3121A1A886400A45F34 /* Main.storyboard */; };
 		E67ED3161A1A886400A45F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3151A1A886400A45F34 /* Images.xcassets */; };
-		E67ED3191A1A886400A45F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3171A1A886400A45F34 /* LaunchScreen.xib */; };
 		E67ED3251A1A886400A45F34 /* vogelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3241A1A886400A45F34 /* vogelAppTests.m */; };
 		E67ED32F1A1A957E00A45F34 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */; };
+		E6E483A61A1BD28F0057EE69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */; };
+		E6E483AA1A1BD5840057EE69 /* splashsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E483A91A1BD5840057EE69 /* splashsmall.png */; };
+		E6E483AC1A1BD6430057EE69 /* iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +39,13 @@
 		E67ED3101A1A886400A45F34 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E67ED3131A1A886400A45F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E67ED3151A1A886400A45F34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E67ED3181A1A886400A45F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E67ED31E1A1A886400A45F34 /* vogelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vogelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67ED3231A1A886400A45F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67ED3241A1A886400A45F34 /* vogelAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vogelAppTests.m; sourceTree = "<group>"; };
 		E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E6E483A51A1BD28F0057EE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E6E483A91A1BD5840057EE69 /* splashsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashsmall.png; path = "../../../Documents/Vervogel app/splashsmall.png"; sourceTree = "<group>"; };
+		E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iphone5@2x.png"; path = "../../../Documents/Vervogel app/iphone5@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +89,15 @@
 		E67ED3071A1A886400A45F34 /* vogelApp */ = {
 			isa = PBXGroup;
 			children = (
+				E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */,
+				E6E483A91A1BD5840057EE69 /* splashsmall.png */,
 				E67ED30C1A1A886400A45F34 /* AppDelegate.h */,
 				E67ED30D1A1A886400A45F34 /* AppDelegate.m */,
 				E67ED30F1A1A886400A45F34 /* RootViewController.h */,
 				E67ED3101A1A886400A45F34 /* RootViewController.m */,
 				E67ED3121A1A886400A45F34 /* Main.storyboard */,
+				E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */,
 				E67ED3151A1A886400A45F34 /* Images.xcassets */,
-				E67ED3171A1A886400A45F34 /* LaunchScreen.xib */,
 				E67ED3081A1A886400A45F34 /* Supporting Files */,
 			);
 			path = vogelApp;
@@ -204,8 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67ED3141A1A886400A45F34 /* Main.storyboard in Resources */,
-				E67ED3191A1A886400A45F34 /* LaunchScreen.xib in Resources */,
+				E6E483A61A1BD28F0057EE69 /* LaunchScreen.xib in Resources */,
+				E6E483AA1A1BD5840057EE69 /* splashsmall.png in Resources */,
 				E67ED3161A1A886400A45F34 /* Images.xcassets in Resources */,
+				E6E483AC1A1BD6430057EE69 /* iphone5@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +264,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E67ED3171A1A886400A45F34 /* LaunchScreen.xib */ = {
+		E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E67ED3181A1A886400A45F34 /* Base */,
+				E6E483A51A1BD28F0057EE69 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
