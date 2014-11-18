@@ -1,1046 +1,487 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01794D4AE601E35CE8A628F3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EABDFFB83ECE7B7BFF0AC3FA</string>
-				<string>7A9D490C3BD2167088EDA7F4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0211B51303E94D6BE4C0326B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-vogelApp-EEEManualLayout-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>086A2F5423C6FCB3E798A591</key>
-		<dict>
-			<key>fileRef</key>
-			<string>89D38381CE1A9B4AE1FAB825</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>11896A932E55090470F0D6D5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9295219E6CCBE187662F49E2</string>
-				<string>16C0A872835E4E7017EDFD9D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16C0A872835E4E7017EDFD9D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-vogelApp-EEEManualLayout.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>18FE0424E04C73CBB6B95A37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>EEEManualLayout.m</string>
-			<key>path</key>
-			<string>Classes/EEEManualLayout.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1CFE25243DADCBEB72BE7493</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D5650FA9CBE952A19BD7319F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>206EFF46FE83603BF49415A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+EEEManualLayout.m</string>
-			<key>path</key>
-			<string>Classes/UIView+EEEManualLayout.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>276AB6E29A7595329A4119F1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>89D38381CE1A9B4AE1FAB825</string>
-				<string>2E4FAD26FE31704C14EE5963</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2E4FAD26FE31704C14EE5963</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2F0EDFF9CBB749FF7B81363B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>32EEAFAA01DE82F71EB305C2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>978C48957FE5C8193FA9C1EE</string>
-				<string>1CFE25243DADCBEB72BE7493</string>
-				<string>983CB50A391253B2B33D4A29</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>39CF45B5D43103C5B2297A5D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-vogelApp-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F2EF1607BD7DEB5E2484956</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E94B92E324C29921065019C</string>
-				<string>57D9BB098D010751BCF156F3</string>
-				<string>715538D8B72FC3C36D4E8BCE</string>
-				<string>39CF45B5D43103C5B2297A5D</string>
-				<string>4E6854DAD7628611C18E330B</string>
-				<string>B80ED5EF12F8582E71DBB228</string>
-				<string>43C92DC35DC2BC34180945BB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-vogelApp</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-vogelApp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43C92DC35DC2BC34180945BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-vogelApp.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4E6854DAD7628611C18E330B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-vogelApp-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52E221A2A93D71DCC3E17C85</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3BA5493D1BB8EBC2C60D74C</string>
-				<string>2F0EDFF9CBB749FF7B81363B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>57D9BB098D010751BCF156F3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-vogelApp-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C6A87C78FF6B9FCA9058A7D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E02CC81ED19BA8B714015803</string>
-			<key>buildPhases</key>
-			<array>
-				<string>32EEAFAA01DE82F71EB305C2</string>
-				<string>01794D4AE601E35CE8A628F3</string>
-				<string>AE9463EF01CA10B7D65D832D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-vogelApp-EEEManualLayout</string>
-			<key>productName</key>
-			<string>Pods-vogelApp-EEEManualLayout</string>
-			<key>productReference</key>
-			<string>16C0A872835E4E7017EDFD9D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>5E94B92E324C29921065019C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-vogelApp-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>64758CB7A81952AA9EAEEF59</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>43C92DC35DC2BC34180945BB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>65BF0DB765D98E507CBBDA5D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>968090A129995AF67DC897C3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>6DBAA18DB8EF99F5CD08E049</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>EEEManualLayout.h</string>
-			<key>path</key>
-			<string>Classes/EEEManualLayout.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>715538D8B72FC3C36D4E8BCE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-vogelApp-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>729A400206B7C0506EB8B751</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E502EB83E5F1AC4C604795AA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>799523A572784A32AD9E4989</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3F2EF1607BD7DEB5E2484956</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A9D490C3BD2167088EDA7F4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2E4FAD26FE31704C14EE5963</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>825183C0ECB6B35D049CAA26</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>970296E10A94BE53249EAE64</string>
-				<string>C562959E72CCE6A85DC24776</string>
-				<string>B21C724CF2CF374D5962F54F</string>
-				<string>11896A932E55090470F0D6D5</string>
-				<string>799523A572784A32AD9E4989</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>85DD94BD9FE99B44DACD133A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DD36B1CB22E96469DC3E1FB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>89D38381CE1A9B4AE1FAB825</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8A11FF3A4D8F7EE054225AB0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C9A3E40C8D98A8863A962F96</string>
-				<string>64758CB7A81952AA9EAEEF59</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8C386A713FB64E8A6707D393</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>968090A129995AF67DC897C3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>9295219E6CCBE187662F49E2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-vogelApp.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>968090A129995AF67DC897C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-vogelApp-EEEManualLayout-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>970296E10A94BE53249EAE64</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>978C48957FE5C8193FA9C1EE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18FE0424E04C73CBB6B95A37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>983CB50A391253B2B33D4A29</key>
-		<dict>
-			<key>fileRef</key>
-			<string>206EFF46FE83603BF49415A3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>9A354F873CE5EE5E08AF6923</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>086A2F5423C6FCB3E798A591</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>AC1F5F8FB2AD3C26F880D972</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>E134B0AB3AC56D20DDE3DDF3</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5C6A87C78FF6B9FCA9058A7D</string>
-			<key>remoteInfo</key>
-			<string>Pods-vogelApp-EEEManualLayout</string>
-		</dict>
-		<key>AE9463EF01CA10B7D65D832D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D20A157F542366BB5D0FE8F0</string>
-				<string>729A400206B7C0506EB8B751</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B21C724CF2CF374D5962F54F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E4B28971E03354DD7B298383</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3BA5493D1BB8EBC2C60D74C</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B80ED5EF12F8582E71DBB228</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-vogelApp.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C562959E72CCE6A85DC24776</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>276AB6E29A7595329A4119F1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C9A3E40C8D98A8863A962F96</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B80ED5EF12F8582E71DBB228</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D20A157F542366BB5D0FE8F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6DBAA18DB8EF99F5CD08E049</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D5650FA9CBE952A19BD7319F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-vogelApp-EEEManualLayout-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD36B1CB22E96469DC3E1FB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>715538D8B72FC3C36D4E8BCE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E02CC81ED19BA8B714015803</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>65BF0DB765D98E507CBBDA5D</string>
-				<string>8C386A713FB64E8A6707D393</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E134B0AB3AC56D20DDE3DDF3</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>52E221A2A93D71DCC3E17C85</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>825183C0ECB6B35D049CAA26</string>
-			<key>productRefGroup</key>
-			<string>11896A932E55090470F0D6D5</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>E7EB81B5979551416E027138</string>
-				<string>5C6A87C78FF6B9FCA9058A7D</string>
-			</array>
-		</dict>
-		<key>E4B28971E03354DD7B298383</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6DBAA18DB8EF99F5CD08E049</string>
-				<string>18FE0424E04C73CBB6B95A37</string>
-				<string>E502EB83E5F1AC4C604795AA</string>
-				<string>206EFF46FE83603BF49415A3</string>
-				<string>F026D9A91BDD832835B92418</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>EEEManualLayout</string>
-			<key>path</key>
-			<string>EEEManualLayout</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E502EB83E5F1AC4C604795AA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIView+EEEManualLayout.h</string>
-			<key>path</key>
-			<string>Classes/UIView+EEEManualLayout.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7EB81B5979551416E027138</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8A11FF3A4D8F7EE054225AB0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>85DD94BD9FE99B44DACD133A</string>
-				<string>9A354F873CE5EE5E08AF6923</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>EC38B787782296D1B2FE3115</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-vogelApp</string>
-			<key>productName</key>
-			<string>Pods-vogelApp</string>
-			<key>productReference</key>
-			<string>9295219E6CCBE187662F49E2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>EABDFFB83ECE7B7BFF0AC3FA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>89D38381CE1A9B4AE1FAB825</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EC38B787782296D1B2FE3115</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5C6A87C78FF6B9FCA9058A7D</string>
-			<key>targetProxy</key>
-			<string>AC1F5F8FB2AD3C26F880D972</string>
-		</dict>
-		<key>F026D9A91BDD832835B92418</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F427EE4511F2ACC634AA14E9</string>
-				<string>968090A129995AF67DC897C3</string>
-				<string>D5650FA9CBE952A19BD7319F</string>
-				<string>0211B51303E94D6BE4C0326B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-vogelApp-EEEManualLayout</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F427EE4511F2ACC634AA14E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-vogelApp-EEEManualLayout.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>E134B0AB3AC56D20DDE3DDF3</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		086A2F5423C6FCB3E798A591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D38381CE1A9B4AE1FAB825 /* Foundation.framework */; };
+		1CFE25243DADCBEB72BE7493 /* Pods-vogelApp-EEEManualLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5650FA9CBE952A19BD7319F /* Pods-vogelApp-EEEManualLayout-dummy.m */; };
+		729A400206B7C0506EB8B751 /* UIView+EEEManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E502EB83E5F1AC4C604795AA /* UIView+EEEManualLayout.h */; };
+		7A9D490C3BD2167088EDA7F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4FAD26FE31704C14EE5963 /* QuartzCore.framework */; };
+		978C48957FE5C8193FA9C1EE /* EEEManualLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FE0424E04C73CBB6B95A37 /* EEEManualLayout.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		983CB50A391253B2B33D4A29 /* UIView+EEEManualLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 206EFF46FE83603BF49415A3 /* UIView+EEEManualLayout.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D20A157F542366BB5D0FE8F0 /* EEEManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBAA18DB8EF99F5CD08E049 /* EEEManualLayout.h */; };
+		DD36B1CB22E96469DC3E1FB0 /* Pods-vogelApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 715538D8B72FC3C36D4E8BCE /* Pods-vogelApp-dummy.m */; };
+		EABDFFB83ECE7B7BFF0AC3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D38381CE1A9B4AE1FAB825 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC1F5F8FB2AD3C26F880D972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E134B0AB3AC56D20DDE3DDF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6A87C78FF6B9FCA9058A7D;
+			remoteInfo = "Pods-vogelApp-EEEManualLayout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0211B51303E94D6BE4C0326B /* Pods-vogelApp-EEEManualLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-vogelApp-EEEManualLayout-prefix.pch"; sourceTree = "<group>"; };
+		16C0A872835E4E7017EDFD9D /* libPods-vogelApp-EEEManualLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp-EEEManualLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FE0424E04C73CBB6B95A37 /* EEEManualLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EEEManualLayout.m; path = Classes/EEEManualLayout.m; sourceTree = "<group>"; };
+		206EFF46FE83603BF49415A3 /* UIView+EEEManualLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+EEEManualLayout.m"; path = "Classes/UIView+EEEManualLayout.m"; sourceTree = "<group>"; };
+		2E4FAD26FE31704C14EE5963 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		39CF45B5D43103C5B2297A5D /* Pods-vogelApp-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-vogelApp-environment.h"; sourceTree = "<group>"; };
+		43C92DC35DC2BC34180945BB /* Pods-vogelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp.release.xcconfig"; sourceTree = "<group>"; };
+		4E6854DAD7628611C18E330B /* Pods-vogelApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-vogelApp-resources.sh"; sourceTree = "<group>"; };
+		57D9BB098D010751BCF156F3 /* Pods-vogelApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-vogelApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E94B92E324C29921065019C /* Pods-vogelApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-vogelApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6DBAA18DB8EF99F5CD08E049 /* EEEManualLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EEEManualLayout.h; path = Classes/EEEManualLayout.h; sourceTree = "<group>"; };
+		715538D8B72FC3C36D4E8BCE /* Pods-vogelApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-vogelApp-dummy.m"; sourceTree = "<group>"; };
+		89D38381CE1A9B4AE1FAB825 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9295219E6CCBE187662F49E2 /* libPods-vogelApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		968090A129995AF67DC897C3 /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-EEEManualLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		970296E10A94BE53249EAE64 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B80ED5EF12F8582E71DBB228 /* Pods-vogelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D5650FA9CBE952A19BD7319F /* Pods-vogelApp-EEEManualLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-vogelApp-EEEManualLayout-dummy.m"; sourceTree = "<group>"; };
+		E502EB83E5F1AC4C604795AA /* UIView+EEEManualLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+EEEManualLayout.h"; path = "Classes/UIView+EEEManualLayout.h"; sourceTree = "<group>"; };
+		F427EE4511F2ACC634AA14E9 /* Pods-vogelApp-EEEManualLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-EEEManualLayout.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01794D4AE601E35CE8A628F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EABDFFB83ECE7B7BFF0AC3FA /* Foundation.framework in Frameworks */,
+				7A9D490C3BD2167088EDA7F4 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A354F873CE5EE5E08AF6923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				086A2F5423C6FCB3E798A591 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11896A932E55090470F0D6D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9295219E6CCBE187662F49E2 /* libPods-vogelApp.a */,
+				16C0A872835E4E7017EDFD9D /* libPods-vogelApp-EEEManualLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		276AB6E29A7595329A4119F1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				89D38381CE1A9B4AE1FAB825 /* Foundation.framework */,
+				2E4FAD26FE31704C14EE5963 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3F2EF1607BD7DEB5E2484956 /* Pods-vogelApp */ = {
+			isa = PBXGroup;
+			children = (
+				5E94B92E324C29921065019C /* Pods-vogelApp-acknowledgements.markdown */,
+				57D9BB098D010751BCF156F3 /* Pods-vogelApp-acknowledgements.plist */,
+				715538D8B72FC3C36D4E8BCE /* Pods-vogelApp-dummy.m */,
+				39CF45B5D43103C5B2297A5D /* Pods-vogelApp-environment.h */,
+				4E6854DAD7628611C18E330B /* Pods-vogelApp-resources.sh */,
+				B80ED5EF12F8582E71DBB228 /* Pods-vogelApp.debug.xcconfig */,
+				43C92DC35DC2BC34180945BB /* Pods-vogelApp.release.xcconfig */,
+			);
+			name = "Pods-vogelApp";
+			path = "Target Support Files/Pods-vogelApp";
+			sourceTree = "<group>";
+		};
+		799523A572784A32AD9E4989 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F2EF1607BD7DEB5E2484956 /* Pods-vogelApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		825183C0ECB6B35D049CAA26 = {
+			isa = PBXGroup;
+			children = (
+				970296E10A94BE53249EAE64 /* Podfile */,
+				C562959E72CCE6A85DC24776 /* Frameworks */,
+				B21C724CF2CF374D5962F54F /* Pods */,
+				11896A932E55090470F0D6D5 /* Products */,
+				799523A572784A32AD9E4989 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B21C724CF2CF374D5962F54F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4B28971E03354DD7B298383 /* EEEManualLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C562959E72CCE6A85DC24776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				276AB6E29A7595329A4119F1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B28971E03354DD7B298383 /* EEEManualLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6DBAA18DB8EF99F5CD08E049 /* EEEManualLayout.h */,
+				18FE0424E04C73CBB6B95A37 /* EEEManualLayout.m */,
+				E502EB83E5F1AC4C604795AA /* UIView+EEEManualLayout.h */,
+				206EFF46FE83603BF49415A3 /* UIView+EEEManualLayout.m */,
+				F026D9A91BDD832835B92418 /* Support Files */,
+			);
+			name = EEEManualLayout;
+			path = EEEManualLayout;
+			sourceTree = "<group>";
+		};
+		F026D9A91BDD832835B92418 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F427EE4511F2ACC634AA14E9 /* Pods-vogelApp-EEEManualLayout.xcconfig */,
+				968090A129995AF67DC897C3 /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */,
+				D5650FA9CBE952A19BD7319F /* Pods-vogelApp-EEEManualLayout-dummy.m */,
+				0211B51303E94D6BE4C0326B /* Pods-vogelApp-EEEManualLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-vogelApp-EEEManualLayout";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AE9463EF01CA10B7D65D832D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20A157F542366BB5D0FE8F0 /* EEEManualLayout.h in Headers */,
+				729A400206B7C0506EB8B751 /* UIView+EEEManualLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5C6A87C78FF6B9FCA9058A7D /* Pods-vogelApp-EEEManualLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02CC81ED19BA8B714015803 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-EEEManualLayout" */;
+			buildPhases = (
+				32EEAFAA01DE82F71EB305C2 /* Sources */,
+				01794D4AE601E35CE8A628F3 /* Frameworks */,
+				AE9463EF01CA10B7D65D832D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-vogelApp-EEEManualLayout";
+			productName = "Pods-vogelApp-EEEManualLayout";
+			productReference = 16C0A872835E4E7017EDFD9D /* libPods-vogelApp-EEEManualLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7EB81B5979551416E027138 /* Pods-vogelApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A11FF3A4D8F7EE054225AB0 /* Build configuration list for PBXNativeTarget "Pods-vogelApp" */;
+			buildPhases = (
+				85DD94BD9FE99B44DACD133A /* Sources */,
+				9A354F873CE5EE5E08AF6923 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC38B787782296D1B2FE3115 /* PBXTargetDependency */,
+			);
+			name = "Pods-vogelApp";
+			productName = "Pods-vogelApp";
+			productReference = 9295219E6CCBE187662F49E2 /* libPods-vogelApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E134B0AB3AC56D20DDE3DDF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 52E221A2A93D71DCC3E17C85 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 825183C0ECB6B35D049CAA26;
+			productRefGroup = 11896A932E55090470F0D6D5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				E7EB81B5979551416E027138 /* Pods-vogelApp */,
+				5C6A87C78FF6B9FCA9058A7D /* Pods-vogelApp-EEEManualLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32EEAFAA01DE82F71EB305C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				978C48957FE5C8193FA9C1EE /* EEEManualLayout.m in Sources */,
+				1CFE25243DADCBEB72BE7493 /* Pods-vogelApp-EEEManualLayout-dummy.m in Sources */,
+				983CB50A391253B2B33D4A29 /* UIView+EEEManualLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85DD94BD9FE99B44DACD133A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD36B1CB22E96469DC3E1FB0 /* Pods-vogelApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC38B787782296D1B2FE3115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C6A87C78FF6B9FCA9058A7D /* Pods-vogelApp-EEEManualLayout */;
+			targetProxy = AC1F5F8FB2AD3C26F880D972 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F0EDFF9CBB749FF7B81363B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RELEASE=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64758CB7A81952AA9EAEEF59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43C92DC35DC2BC34180945BB /* Pods-vogelApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65BF0DB765D98E507CBBDA5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968090A129995AF67DC897C3 /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8C386A713FB64E8A6707D393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968090A129995AF67DC897C3 /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3BA5493D1BB8EBC2C60D74C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		C9A3E40C8D98A8863A962F96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80ED5EF12F8582E71DBB228 /* Pods-vogelApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E221A2A93D71DCC3E17C85 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3BA5493D1BB8EBC2C60D74C /* Debug */,
+				2F0EDFF9CBB749FF7B81363B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A11FF3A4D8F7EE054225AB0 /* Build configuration list for PBXNativeTarget "Pods-vogelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A3E40C8D98A8863A962F96 /* Debug */,
+				64758CB7A81952AA9EAEEF59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E02CC81ED19BA8B714015803 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-EEEManualLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65BF0DB765D98E507CBBDA5D /* Debug */,
+				8C386A713FB64E8A6707D393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E134B0AB3AC56D20DDE3DDF3 /* Project object */;
+}
