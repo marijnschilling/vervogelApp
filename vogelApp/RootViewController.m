@@ -7,14 +7,15 @@
 //
 
 #import "RootViewController.h"
+#import "VideoPlayViewController.h"
 
 @interface RootViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic, strong) UIImagePickerController * imagePicker;
 @property(nonatomic, strong) UILabel *stopRecordLabel;
 @property(nonatomic, strong) UILabel *recordLabel;
-@property(nonatomic, strong) id videoURL;
-@property(nonatomic, strong) MPMoviePlayerController *player;
+
+@property(nonatomic, strong) VideoPlayViewController *videoPlayViewController;
 @end
 
 @implementation RootViewController
@@ -22,11 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self createImagePicker];
-}
+    self.view.backgroundColor = [UIColor blackColor];
 
-- (void)viewDidAppear:(BOOL)animated
-{
+    [self createImagePicker];
+
     CGRect overlayFrame = [self.imagePicker.view frame];
     UIView * cameraOverlayView = [[UIView alloc] initWithFrame:overlayFrame];
 
@@ -56,8 +56,8 @@
     [self.stopRecordLabel addGestureRecognizer:stopRecordGesture];
     [cameraOverlayView addSubview:self.stopRecordLabel];
 
-    [self presentViewController:self.imagePicker animated:animated completion:nil];
     self.imagePicker.cameraOverlayView = cameraOverlayView;
+    [self presentViewController:self.imagePicker animated:YES completion:nil];
 }
 
 - (void)createImagePicker {
@@ -97,34 +97,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
-    self.videoURL = info[UIImagePickerControllerMediaURL];
-    [self Play];
+    [picker dismissViewControllerAnimated:YES completion:^{
+//        self.imagePicker = nil;
+    }];
 
+    NSURL *videoURL = info[UIImagePickerControllerMediaURL];
+    VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithURL:videoURL];
+    [self.navigationController pushViewController:videoPlayViewController animated:YES];
 }
-
--(void)Play
-{
-
-    NSData *videoData = [NSData dataWithContentsOfURL:self.videoURL];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/vid1.mp4"];
-
-    BOOL success = [videoData writeToFile:tempPath atomically:NO];
-
-    self.player = [[MPMoviePlayerController alloc]initWithContentURL:self.videoURL];
-
-    self.player.shouldAutoplay = NO;
-    self.player.view.frame = self.view.bounds;
-
-    [self.view addSubview:self.player.view];
-
-    self.player.scalingMode = MPMovieScalingModeAspectFit;
-
-    self.player.fullscreen = YES;
-
-    [self.player play];
-}
-
 
 @end

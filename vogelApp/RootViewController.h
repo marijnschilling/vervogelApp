@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MediaPlayer/MediaPlayer.h>
+
+@class VideoPlayViewController;
 
 @interface RootViewController : UIViewController
 
