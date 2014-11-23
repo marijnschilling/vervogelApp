@@ -49,6 +49,7 @@
     self.player = [[MPMoviePlayerController alloc]initWithContentURL:self.videoURL];
 
     self.player.shouldAutoplay = NO;
+    self.player.currentPlaybackRate = 18;
     self.player.view.frame = self.view.bounds;
 
     [self.view addSubview:self.player.view];
