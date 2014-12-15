@@ -126,7 +126,7 @@
     self.audioManager.inputBlock = ^(float *data, UInt32 numFrames, UInt32 numChannels) {
         [weakSelf.fileWriter writeNewAudio:data numFrames:numFrames numChannels:numChannels];
         counter += 1;
-        if (counter > 1600*5) { // roughly 10 seconds of audio at double speed
+        if (counter > 1600) { // roughly 10 seconds of audio at double speed
             weakSelf.fileWriter = nil;
             weakSelf.audioManager.inputBlock = nil;
             [weakSelf stopRecord];
@@ -147,6 +147,7 @@
     VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithVideoURL:videoURL audioURL:self.audioFileURL];
     [self.navigationController pushViewController:videoPlayViewController animated:YES];
 
+    [self.fileReader pause];
     [picker dismissViewControllerAnimated:YES completion:^{
     }];
 }

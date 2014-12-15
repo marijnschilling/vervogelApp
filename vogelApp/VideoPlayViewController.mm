@@ -17,6 +17,7 @@
 @property(nonatomic, strong) Novocaine *audioManager;
 
 @property(nonatomic, strong) NSURL *audioURL;
+@property(nonatomic, strong) UILabel *playButtonLabel;
 @end
 
 @implementation VideoPlayViewController
@@ -29,7 +30,6 @@
         _videoURL = url;
         _audioURL = audioURL;
         _audioManager = [Novocaine audioManager];
-
     }
 
     return self;
@@ -38,16 +38,24 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    [self play];
 
     UIImage *image = [UIImage imageNamed:@"cameraOverlay"];
     UIImageView *overlay = [[UIImageView alloc] initWithImage:image];
     [self.view addSubview:overlay];
 
+    self.playButtonLabel = [[UILabel alloc] init];
+    self.playButtonLabel.text = @"Play >>>";
+    [self.playButtonLabel sizeToFit];
+    self.playButtonLabel.frame = CGRectMake(self.view.bounds.size.width/2- self.playButtonLabel.frame.size.width/2, self.view.bounds.size.height/2- self.playButtonLabel.frame.size.height/2, self.playButtonLabel.frame.size.width, self.playButtonLabel.frame.size.height);
+
+    [self.playButtonLabel setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *recordGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapPlay:)];
+    [self.playButtonLabel addGestureRecognizer:recordGesture];
+    [self.view addSubview:self.playButtonLabel];
+
 }
 
--(void)play
-{
+- (void)didTapPlay:(id)didTapPlay {
 
     NSURL *inputFileURL = self.audioURL;
 
