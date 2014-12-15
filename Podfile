@@ -5,6 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'vogelApp' do
 
+pod 'Novocaine', '~> 0.0'
 pod 'EEEManualLayout', '~> 0.1'
 
 end

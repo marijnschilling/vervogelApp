@@ -99,11 +99,10 @@
 
     [picker dismissViewControllerAnimated:YES completion:^{
 //        self.imagePicker = nil;
+        NSURL *videoURL = info[UIImagePickerControllerMediaURL];
+        VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithURL:videoURL];
+        [self.navigationController pushViewController:videoPlayViewController animated:YES];
     }];
-
-    NSURL *videoURL = info[UIImagePickerControllerMediaURL];
-    VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithURL:videoURL];
-    [self.navigationController pushViewController:videoPlayViewController animated:YES];
 }
 
 @end
