@@ -5,8 +5,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class AudioFileWriter;
+@class Novocaine;
+
 @interface VideoPlayViewController : UIViewController
 
-- (id)initWithURL:(NSURL *)url;
+- (id)initWithVideoURL:(NSURL *)url audioURL:(NSURL *)audioURL;
 
 @end

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-vogelApp-Novocaine.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-vogelApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5C6A87C78FF6B9FCA9058A7D</key>
+		<key>828007BF9C6E83429747AF94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7EB81B5979551416E027138</key>
+		<key>DBE2D68DF61C482598A1D1FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBAAF5E6D448D6F79AF3AC12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

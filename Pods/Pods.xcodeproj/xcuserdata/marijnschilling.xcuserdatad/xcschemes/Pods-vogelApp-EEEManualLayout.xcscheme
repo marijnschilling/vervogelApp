@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C6A87C78FF6B9FCA9058A7D"
+               BlueprintIdentifier = "DBE2D68DF61C482598A1D1FD"
                BuildableName = "libPods-vogelApp-EEEManualLayout.a"
                BlueprintName = "Pods-vogelApp-EEEManualLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

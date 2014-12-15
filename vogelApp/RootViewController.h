@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class VideoPlayViewController;
+@class AudioFileReader;
 
 @interface RootViewController : UIViewController
 

@@ -6,19 +6,65 @@
 //  Copyright (c) 2014 marijn. All rights reserved.
 //
 
+#import <Novocaine/AudioFileReader.h>
+#import <Novocaine/AudioFileWriter.h>
 #import "RootViewController.h"
 #import "VideoPlayViewController.h"
+#import "Novocaine.h"
+#import "AudioFileReader.h"
 
 @interface RootViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic, strong) UIImagePickerController * imagePicker;
-@property(nonatomic, strong) UILabel *stopRecordLabel;
 @property(nonatomic, strong) UILabel *recordLabel;
 
 @property(nonatomic, strong) VideoPlayViewController *videoPlayViewController;
+@property(nonatomic, strong) AudioFileReader *fileReader;
+@property(nonatomic) RingBuffer *ringBuffer;
+@property(nonatomic, strong) Novocaine *audioManager;
+@property(nonatomic, strong) AudioFileWriter *fileWriter;
+
+@property(nonatomic, strong) NSURL *audioFileURL;
 @end
 
 @implementation RootViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+
+    __weak RootViewController *weakSelf = self;
+
+    self.ringBuffer = new RingBuffer(32768, 2);
+    self.audioManager = [Novocaine audioManager];
+
+    NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
+
+    self.fileReader = [[AudioFileReader alloc]
+            initWithAudioFileURL:inputFileURL
+                    samplingRate:(float) self.audioManager.samplingRate
+                     numChannels:self.audioManager.numOutputChannels];
+
+    [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
+    {
+        [weakSelf.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
+    }];
+
+    NSArray *pathComponents = [NSArray arrayWithObjects:
+            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+            @"My Recording.m4a",
+                    nil];
+    self.audioFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+    NSLog(@"URL: %@", self.audioFileURL);
+
+    self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
+                                                       samplingRate:(float) (self.audioManager.samplingRate * 14)
+                                                        numChannels:self.audioManager.numInputChannels];
+
+
+    NSLog(@"samplingrate %f", self.audioManager.samplingRate);
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +74,7 @@
     [self createImagePicker];
 
     CGRect overlayFrame = [self.imagePicker.view frame];
-    UIView * cameraOverlayView = [[UIView alloc] initWithFrame:overlayFrame];
+    UIView *cameraOverlayView = [[UIView alloc] initWithFrame:overlayFrame];
 
     UIImage *image = [UIImage imageNamed:@"cameraOverlay"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -43,18 +89,6 @@
     UITapGestureRecognizer *recordGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapRecord:)];
     [self.recordLabel addGestureRecognizer:recordGesture];
     [cameraOverlayView addSubview:self.recordLabel];
-    
-    self.stopRecordLabel = [[UILabel alloc] init];
-    self.stopRecordLabel.text = @"Stop";
-    self.stopRecordLabel.textColor = [UIColor redColor];
-    [self.stopRecordLabel sizeToFit];
-    self.stopRecordLabel.frame = CGRectMake(self.view.bounds.size.width/2-self.stopRecordLabel.frame.size.width/2, self.view.bounds.size.height/2-self.stopRecordLabel.frame.size.height/2,self.stopRecordLabel.frame.size.width,self.stopRecordLabel.frame.size.height);
-    [self.stopRecordLabel setHidden:YES];
-
-    [self.stopRecordLabel setUserInteractionEnabled:YES];
-    UITapGestureRecognizer *stopRecordGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapStopRecord:)];
-    [self.stopRecordLabel addGestureRecognizer:stopRecordGesture];
-    [cameraOverlayView addSubview:self.stopRecordLabel];
 
     self.imagePicker.cameraOverlayView = cameraOverlayView;
     [self presentViewController:self.imagePicker animated:YES completion:nil];
@@ -85,25 +119,36 @@
 - (void)didTapRecord:(id)didTapRecord {
 
     [self.recordLabel setHidden:YES];
-    [self.stopRecordLabel setHidden:NO];
     [self.imagePicker startVideoCapture];
+
+    __weak RootViewController *weakSelf = self;
+    __block int counter = 0;
+    self.audioManager.inputBlock = ^(float *data, UInt32 numFrames, UInt32 numChannels) {
+        [weakSelf.fileWriter writeNewAudio:data numFrames:numFrames numChannels:numChannels];
+        counter += 1;
+        if (counter > 1600*5) { // roughly 10 seconds of audio at double speed
+            weakSelf.fileWriter = nil;
+            weakSelf.audioManager.inputBlock = nil;
+            [weakSelf stopRecord];
+        }
+    };
+
+    [self.audioManager play];
+    [self.fileReader play];
+
 }
 
-- (void)didTapStopRecord:(id)didTapStopRecord {
-
-    [self.stopRecordLabel setHidden:YES];
+- (void)stopRecord {
     [self.imagePicker stopVideoCapture];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSURL *videoURL = info[UIImagePickerControllerMediaURL];
+    VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithVideoURL:videoURL audioURL:self.audioFileURL];
+    [self.navigationController pushViewController:videoPlayViewController animated:YES];
 
     [picker dismissViewControllerAnimated:YES completion:^{
-//        self.imagePicker = nil;
     }];
-
-    NSURL *videoURL = info[UIImagePickerControllerMediaURL];
-    VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithURL:videoURL];
-    [self.navigationController pushViewController:videoPlayViewController animated:YES];
 }
 
 @end
