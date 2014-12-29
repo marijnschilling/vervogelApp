@@ -19,7 +19,7 @@
 @property(nonatomic, strong) UILabel *recordLabel;
 
 @property(nonatomic, strong) VideoPlayViewController *videoPlayViewController;
-@property(nonatomic, strong) AudioFileReader *fileReader;
+@property(nonatomic, strong) AudioFileReader *birdSoundPlayer;
 @property(nonatomic) RingBuffer *ringBuffer;
 @property(nonatomic, strong) Novocaine *audioManager;
 @property(nonatomic, strong) AudioFileWriter *fileWriter;
@@ -40,42 +40,37 @@
 
     NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
 
-    self.fileReader = [[AudioFileReader alloc]
+    self.birdSoundPlayer = [[AudioFileReader alloc]
             initWithAudioFileURL:inputFileURL
                     samplingRate:(float) self.audioManager.samplingRate
                      numChannels:self.audioManager.numOutputChannels];
 
-    [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
-    {
-        [weakSelf.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
-    }];
+    self.audioFileURL = [self getEmptyAudioPath];
+
+    self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
+                                                       samplingRate:(float) (self.audioManager.samplingRate * 14)
+                                                        numChannels:self.audioManager.numInputChannels];
+}
+
+- (NSURL *)getEmptyAudioPath {
 
     NSArray *pathComponents = [NSArray arrayWithObjects:
             [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject],
             @"My Recording.m4a",
                     nil];
-    self.audioFileURL = [NSURL fileURLWithPathComponents:pathComponents];
-    NSLog(@"URL: %@", self.audioFileURL);
+    NSURL *fileURL = [NSURL fileURLWithPathComponents:pathComponents];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
-    NSString *filePath = [self.audioFileURL path];
+    NSString *filePath = [fileURL path];
     BOOL fileExists = [fileManager fileExistsAtPath:filePath];
-     if(fileExists) {
-         NSError *error = nil;
-         if(![fileManager removeItemAtPath:[self.audioFileURL path] error:&error]){
-             NSLog(@"[Error] %@ (%@)", error, filePath);
-         }
-     }
-
-
-    self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
-                                                       samplingRate:(float) (self.audioManager.samplingRate * 14)
-                                                        numChannels:self.audioManager.numInputChannels];
-
-
-    NSLog(@"samplingrate %f", self.audioManager.samplingRate);
-
+    if(fileExists) {
+        NSError *error = nil;
+        if(![fileManager removeItemAtPath:filePath error:&error]){
+            NSLog(@"[Error] %@ (%@)", error, filePath);
+        }
+    }
+   return fileURL;
 }
 
 - (void)viewDidLoad {
@@ -131,23 +126,32 @@
 - (void)didTapRecord:(id)didTapRecord {
 
     [self.recordLabel setHidden:YES];
-    [self.imagePicker startVideoCapture];
+
 
     __weak RootViewController *weakSelf = self;
     __block int counter = 0;
     self.audioManager.inputBlock = ^(float *data, UInt32 numFrames, UInt32 numChannels) {
         [weakSelf.fileWriter writeNewAudio:data numFrames:numFrames numChannels:numChannels];
         counter += 1;
-        if (counter > 1600) { // roughly 10 seconds of audio at double speed
+        if (counter > 1600) {
             weakSelf.fileWriter = nil;
             weakSelf.audioManager.inputBlock = nil;
+            weakSelf.audioManager.outputBlock = nil;
+            [weakSelf.birdSoundPlayer pause];
             [weakSelf stopRecord];
         }
     };
 
-    [self.audioManager play];
-    [self.fileReader play];
+    [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
+    {
+        [weakSelf.birdSoundPlayer retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
+    }];
 
+
+    [self.audioManager play];
+    [self.birdSoundPlayer play];
+
+    [self.imagePicker startVideoCapture];
 }
 
 - (void)stopRecord {
@@ -159,9 +163,8 @@
     VideoPlayViewController *videoPlayViewController = [[VideoPlayViewController alloc] initWithVideoURL:videoURL audioURL:self.audioFileURL];
     [self.navigationController pushViewController:videoPlayViewController animated:YES];
 
-    [self.fileReader pause];
-    [picker dismissViewControllerAnimated:YES completion:^{
-    }];
+    [self.birdSoundPlayer pause];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
