@@ -51,11 +51,23 @@
     }];
 
     NSArray *pathComponents = [NSArray arrayWithObjects:
-            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject],
             @"My Recording.m4a",
                     nil];
     self.audioFileURL = [NSURL fileURLWithPathComponents:pathComponents];
     NSLog(@"URL: %@", self.audioFileURL);
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    NSString *filePath = [self.audioFileURL path];
+    BOOL fileExists = [fileManager fileExistsAtPath:filePath];
+     if(fileExists) {
+         NSError *error = nil;
+         if(![fileManager removeItemAtPath:[self.audioFileURL path] error:&error]){
+             NSLog(@"[Error] %@ (%@)", error, filePath);
+         }
+     }
+
 
     self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
                                                        samplingRate:(float) (self.audioManager.samplingRate * 14)
