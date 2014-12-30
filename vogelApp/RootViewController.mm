@@ -25,55 +25,32 @@
 @property(nonatomic, strong) AudioFileWriter *fileWriter;
 
 @property(nonatomic, strong) NSURL *audioFileURL;
+@property(nonatomic, strong) UILabel *stopRecordLabel;
 @end
 
 @implementation RootViewController
 
-- (void)viewWillAppear:(BOOL)animated {
+- (instancetype)init {
 
-    [super viewWillAppear:animated];
+    self = [super init];
 
-    __weak RootViewController *weakSelf = self;
+    if (self) {
+        _ringBuffer = new RingBuffer(32768, 2);
+        _audioManager = [Novocaine audioManager];
 
-    self.ringBuffer = new RingBuffer(32768, 2);
-    self.audioManager = [Novocaine audioManager];
+        NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
 
-    NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
-
-    self.birdSoundPlayer = [[AudioFileReader alloc]
-            initWithAudioFileURL:inputFileURL
-                    samplingRate:(float) self.audioManager.samplingRate
-                     numChannels:self.audioManager.numOutputChannels];
-
-    self.audioFileURL = [self getEmptyAudioPath];
-
-    self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
-                                                       samplingRate:(float) (self.audioManager.samplingRate * 14)
-                                                        numChannels:self.audioManager.numInputChannels];
-}
-
-- (NSURL *)getEmptyAudioPath {
-
-    NSArray *pathComponents = [NSArray arrayWithObjects:
-            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject],
-            @"My Recording.m4a",
-                    nil];
-    NSURL *fileURL = [NSURL fileURLWithPathComponents:pathComponents];
-
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-    NSString *filePath = [fileURL path];
-    BOOL fileExists = [fileManager fileExistsAtPath:filePath];
-    if(fileExists) {
-        NSError *error = nil;
-        if(![fileManager removeItemAtPath:filePath error:&error]){
-            NSLog(@"[Error] %@ (%@)", error, filePath);
-        }
+        _birdSoundPlayer = [[AudioFileReader alloc]
+                initWithAudioFileURL:inputFileURL
+                        samplingRate:(float) self.audioManager.samplingRate
+                         numChannels:self.audioManager.numOutputChannels];
     }
-   return fileURL;
+
+    return self;
 }
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor blackColor];
@@ -97,8 +74,52 @@
     [self.recordLabel addGestureRecognizer:recordGesture];
     [cameraOverlayView addSubview:self.recordLabel];
 
+    self.stopRecordLabel = [[UILabel alloc] init];
+    self.stopRecordLabel.text = @"Stop >>>";
+    [self.stopRecordLabel sizeToFit];
+    self.stopRecordLabel.frame = CGRectMake(self.view.bounds.size.width/2-self.stopRecordLabel.frame.size.width/2, self.view.bounds.size.height/2-self.stopRecordLabel.frame.size.height/2,self.stopRecordLabel.frame.size.width,self.stopRecordLabel.frame.size.height);
+
+    [self.stopRecordLabel setUserInteractionEnabled:YES];
+
+    UITapGestureRecognizer *stopRecordGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stopRecord)];
+    [self.stopRecordLabel addGestureRecognizer:stopRecordGesture];
+    [cameraOverlayView addSubview:self.stopRecordLabel];
+
     self.imagePicker.cameraOverlayView = cameraOverlayView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self.recordLabel setHidden:NO];
+    [self.stopRecordLabel setHidden:YES];
+
+    _audioFileURL = [self getEmptyAudioPath];
+    _fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
+                                                   samplingRate:(float) (self.audioManager.samplingRate * 14)
+                                                    numChannels:self.audioManager.numInputChannels];
+
     [self presentViewController:self.imagePicker animated:YES completion:nil];
+}
+
+
+- (NSURL *)getEmptyAudioPath {
+
+    NSArray *pathComponents = @[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject],
+            @"My Recording.m4a"];
+    NSURL *fileURL = [NSURL fileURLWithPathComponents:pathComponents];
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    NSString *filePath = [fileURL path];
+    BOOL fileExists = [fileManager fileExistsAtPath:filePath];
+    if(fileExists) {
+        NSError *error = nil;
+        if(![fileManager removeItemAtPath:filePath error:&error]){
+            NSLog(@"[Error] %@ (%@)", error, filePath);
+        }
+    }
+   return fileURL;
 }
 
 - (void)createImagePicker {
@@ -126,27 +147,23 @@
 - (void)didTapRecord:(id)didTapRecord {
 
     [self.recordLabel setHidden:YES];
-
+    [self.stopRecordLabel setHidden:NO];
 
     __weak RootViewController *weakSelf = self;
-    __block int counter = 0;
     self.audioManager.inputBlock = ^(float *data, UInt32 numFrames, UInt32 numChannels) {
+
         [weakSelf.fileWriter writeNewAudio:data numFrames:numFrames numChannels:numChannels];
-        counter += 1;
-        if (counter > 1600) {
-            weakSelf.fileWriter = nil;
-            weakSelf.audioManager.inputBlock = nil;
-            weakSelf.audioManager.outputBlock = nil;
-            [weakSelf.birdSoundPlayer pause];
-            [weakSelf stopRecord];
-        }
+
     };
 
-    [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
-    {
-        [weakSelf.birdSoundPlayer retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
-    }];
+    [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels){
 
+        [weakSelf.birdSoundPlayer retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
+        if(weakSelf.birdSoundPlayer.currentTime >= 300){
+            NSLog(@"the birdsound is finished playing");
+            [weakSelf stopRecord];
+        }
+    }];
 
     [self.audioManager play];
     [self.birdSoundPlayer play];
@@ -155,6 +172,9 @@
 }
 
 - (void)stopRecord {
+    self.fileWriter = nil;
+    self.audioManager.inputBlock = nil;
+    self.audioManager.outputBlock = nil;
     [self.imagePicker stopVideoCapture];
 }
 
