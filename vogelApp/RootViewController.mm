@@ -46,7 +46,7 @@
 
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 
     [self createImagePicker];
 
@@ -59,6 +59,7 @@
 
     self.recordLabel = [[UILabel alloc] init];
     self.recordLabel.text = @"Record >>>";
+    self.recordLabel.textColor = [UIColor whiteColor];
     [self.recordLabel sizeToFit];
     self.recordLabel.frame = CGRectMake(self.view.bounds.size.width/2-self.recordLabel.frame.size.width/2, self.view.bounds.size.height/2-self.recordLabel.frame.size.height/2,self.recordLabel.frame.size.width,self.recordLabel.frame.size.height);
 
@@ -69,6 +70,7 @@
 
     self.stopRecordLabel = [[UILabel alloc] init];
     self.stopRecordLabel.text = @"Stop >>>";
+    self.stopRecordLabel.textColor = [UIColor whiteColor];
     self.stopRecordLabel.alpha = 0.3;
     [self.stopRecordLabel sizeToFit];
     self.stopRecordLabel.frame = CGRectMake(self.view.bounds.size.width/2-self.stopRecordLabel.frame.size.width/2, self.view.bounds.size.height/2-self.stopRecordLabel.frame.size.height/2,self.stopRecordLabel.frame.size.width,self.stopRecordLabel.frame.size.height);
