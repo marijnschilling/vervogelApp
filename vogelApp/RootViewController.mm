@@ -37,13 +37,6 @@
     if (self) {
         _ringBuffer = new RingBuffer(32768, 2);
         _audioManager = [Novocaine audioManager];
-
-        NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
-
-        _birdSoundPlayer = [[AudioFileReader alloc]
-                initWithAudioFileURL:inputFileURL
-                        samplingRate:(float) self.audioManager.samplingRate
-                         numChannels:self.audioManager.numOutputChannels];
     }
 
     return self;
@@ -76,6 +69,7 @@
 
     self.stopRecordLabel = [[UILabel alloc] init];
     self.stopRecordLabel.text = @"Stop >>>";
+    self.stopRecordLabel.alpha = 0.3;
     [self.stopRecordLabel sizeToFit];
     self.stopRecordLabel.frame = CGRectMake(self.view.bounds.size.width/2-self.stopRecordLabel.frame.size.width/2, self.view.bounds.size.height/2-self.stopRecordLabel.frame.size.height/2,self.stopRecordLabel.frame.size.width,self.stopRecordLabel.frame.size.height);
 
@@ -94,8 +88,15 @@
     [self.recordLabel setHidden:NO];
     [self.stopRecordLabel setHidden:YES];
 
-    _audioFileURL = [self getEmptyAudioPath];
-    _fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
+    NSURL *inputFileURL = [[NSBundle mainBundle] URLForResource:@"bird_1" withExtension:@"wav"];
+
+    self.birdSoundPlayer = [[AudioFileReader alloc]
+            initWithAudioFileURL:inputFileURL
+                    samplingRate:(float) self.audioManager.samplingRate
+                     numChannels:self.audioManager.numOutputChannels];
+
+    self.audioFileURL = [self getEmptyAudioPath];
+    self.fileWriter = [[AudioFileWriter alloc] initWithAudioFileURL:self.audioFileURL
                                                    samplingRate:(float) (self.audioManager.samplingRate * 14)
                                                     numChannels:self.audioManager.numInputChannels];
 

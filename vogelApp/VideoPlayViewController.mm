@@ -18,6 +18,8 @@
 
 @property(nonatomic, strong) NSURL *audioURL;
 @property(nonatomic, strong) UILabel *playButtonLabel;
+@property(nonatomic, strong) UIImageView *overlay;
+@property(nonatomic, strong) AudioFileReader *fileReader;
 @end
 
 @implementation VideoPlayViewController
@@ -39,9 +41,34 @@
 
     [super viewDidLoad];
 
+    self.fileReader = [[AudioFileReader alloc]
+            initWithAudioFileURL:self.audioURL
+                    samplingRate:(float) self.audioManager.samplingRate
+                     numChannels:self.audioManager.numOutputChannels];
+
+
+    NSData *videoData = [NSData dataWithContentsOfURL:self.videoURL];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/vid1.mp4"];
+
+    [videoData writeToFile:tempPath atomically:NO];
+
+
+    self.player = [[MPMoviePlayerController alloc]initWithContentURL:self.videoURL];
+
+    self.player.shouldAutoplay = NO;
+    self.player.currentPlaybackRate = 18;
+    self.player.view.frame = self.view.bounds;
+
+    [self.view addSubview:self.player.view];
+
+    self.player.scalingMode = MPMovieScalingModeAspectFit;
+    self.player.fullscreen = YES;
+
     UIImage *image = [UIImage imageNamed:@"cameraOverlay"];
-    UIImageView *overlay = [[UIImageView alloc] initWithImage:image];
-    [self.view addSubview:overlay];
+    self.overlay = [[UIImageView alloc] initWithImage:image];
+    [self.player.view addSubview:self.overlay];
 
     self.playButtonLabel = [[UILabel alloc] init];
     self.playButtonLabel.text = @"Play >>>";
@@ -53,44 +80,31 @@
     [self.playButtonLabel addGestureRecognizer:recordGesture];
     [self.view addSubview:self.playButtonLabel];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self // the object listening / "observing" to the notification
+                                             selector:@selector(playingFinished:) // method to call when the notification was pushed
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification // notification the observer should listen to
+                                               object:nil]; // the object that is passed to the method
 }
 
 - (void)didTapPlay:(id)didTapPlay {
 
-    NSURL *inputFileURL = self.audioURL;
-
-    AudioFileReader *fileReader = [[AudioFileReader alloc]
-            initWithAudioFileURL:inputFileURL
-                    samplingRate:(float) self.audioManager.samplingRate
-                     numChannels:self.audioManager.numOutputChannels];
+    [self.playButtonLabel setHidden:YES];
 
     [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
     {
-        [fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
+        [self.fileReader retrieveFreshAudio:data numFrames:numFrames numChannels:numChannels];
     }];
 
-    [fileReader play];
-
-    NSData *videoData = [NSData dataWithContentsOfURL:self.videoURL];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/vid1.mp4"];
-
-    BOOL success = [videoData writeToFile:tempPath atomically:NO];
-
-    self.player = [[MPMoviePlayerController alloc]initWithContentURL:self.videoURL];
-
-    self.player.shouldAutoplay = NO;
-    self.player.currentPlaybackRate = 18;
-    self.player.view.frame = self.view.bounds;
-
-    [self.view addSubview:self.player.view];
-
-    self.player.scalingMode = MPMovieScalingModeAspectFit;
-
-    self.player.fullscreen = YES;
-
+    [self.fileReader play];
     [self.player play];
 }
+
+- (void)playingFinished:(id)playingFinished {
+
+    [self.fileReader pause];
+    self.audioManager.outputBlock = nil;
+}
+
+
 
 @end
