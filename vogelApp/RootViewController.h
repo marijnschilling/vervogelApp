@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  vogelApp
 //
 //  Created by Marijn Schilling on 17/11/14.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class VideoPlayViewController;
+@class AudioFileReader;
+
+@interface RootViewController : UIViewController
 
 
 @end

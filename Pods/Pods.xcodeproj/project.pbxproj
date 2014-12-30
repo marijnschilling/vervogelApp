@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0234BC27D5AC9BE56A0F1520 /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6443E823C005E55952CAED3B /* AudioFileReader.mm */; };
+		1175139AD7D55EE2D3E18BC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77EE54F8F2F106F2D6759 /* Foundation.framework */; };
+		2B05ABAD3391F41A4A248BD6 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87774373F9F5352B00E76E40 /* RingBuffer.mm */; };
+		37635FDAB8008434999800A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F91A3D895FF9FDD01C8C185 /* AudioToolbox.framework */; };
+		3B768E3822F35B4C2B959C59 /* UIView+EEEManualLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B514A3137282152685FD9 /* UIView+EEEManualLayout.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3F4C3A71609E8DEC570DE1E6 /* AudioFileWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E546FC9E3105D51BA20CD06C /* AudioFileWriter.h */; };
+		475B4F5474A9936C84F8A354 /* RingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = C7641AA3150527F8C041AA18 /* RingBuffer.h */; };
+		54ABF503FED9FE6DA733BA82 /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6343D5A2EE35F71606D3CC8D /* Novocaine.m */; };
+		735F02D63A30F215774DCEB4 /* EEEManualLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF7356E0F60764958CD070 /* EEEManualLayout.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		78882C42B8F86106C85C7CB5 /* Pods-vogelApp-Novocaine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D4877246757AC5C1D517B3 /* Pods-vogelApp-Novocaine-dummy.m */; };
+		863F6E4A40607C8C2E81975A /* Novocaine.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A94C6828BECEFB42B99DEC /* Novocaine.h */; };
+		90DB8A0F0BB9F5A731F1F3E5 /* Pods-vogelApp-EEEManualLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3239D66108AA65B0921007C1 /* Pods-vogelApp-EEEManualLayout-dummy.m */; };
+		9A7F0B6128E39F406D668A39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77EE54F8F2F106F2D6759 /* Foundation.framework */; };
+		9D3814D642D6C2F313954B0C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6A72734E9BFC959A240D4E /* Accelerate.framework */; };
+		AB8DF5351B3962A521B6274B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3B4B7529726E15FE98380A /* QuartzCore.framework */; };
+		AC9A2EC7DD4FD14024EE84F8 /* EEEManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B62ED019AC5BF03C8104E89A /* EEEManualLayout.h */; };
+		B1D6DCD0ABCC727CC094028D /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA6FBF23A2A51C684EC784A /* AudioFileWriter.m */; };
+		CA5A135B561A263A0A6EFB27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B77EE54F8F2F106F2D6759 /* Foundation.framework */; };
+		E87D5BE186E61DEC37A942B1 /* UIView+EEEManualLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 602A748E7E480C17686D6754 /* UIView+EEEManualLayout.h */; };
+		F05B10ACB296494E4197BF58 /* AudioFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = D25578D5FFD83F10F14E1846 /* AudioFileReader.h */; };
+		F1CEDDF851F4CE5F13457280 /* Pods-vogelApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 103034F8A2E47C2178DC9249 /* Pods-vogelApp-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B497825843C698292B8FEB3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E103E51786012CE87B5B7C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE2D68DF61C482598A1D1FD;
+			remoteInfo = "Pods-vogelApp-EEEManualLayout";
+		};
+		EB83FBB6F262129F511F9B86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E103E51786012CE87B5B7C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828007BF9C6E83429747AF94;
+			remoteInfo = "Pods-vogelApp-Novocaine";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08B77EE54F8F2F106F2D6759 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		099B514A3137282152685FD9 /* UIView+EEEManualLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+EEEManualLayout.m"; path = "Classes/UIView+EEEManualLayout.m"; sourceTree = "<group>"; };
+		0F535AB173DF620AD127D212 /* libPods-vogelApp-EEEManualLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp-EEEManualLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		103034F8A2E47C2178DC9249 /* Pods-vogelApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-vogelApp-dummy.m"; sourceTree = "<group>"; };
+		15EA063DA1E0862D10C870C7 /* Pods-vogelApp-Novocaine.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-Novocaine.xcconfig"; sourceTree = "<group>"; };
+		236B003CE26BC12CF9172EC5 /* Pods-vogelApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-vogelApp-resources.sh"; sourceTree = "<group>"; };
+		2E3B4B7529726E15FE98380A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		3239D66108AA65B0921007C1 /* Pods-vogelApp-EEEManualLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-vogelApp-EEEManualLayout-dummy.m"; sourceTree = "<group>"; };
+		3F5A68D6386E35AFBEC889F6 /* libPods-vogelApp-Novocaine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp-Novocaine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50CC56EC30DC350177D7FB64 /* Pods-vogelApp-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-vogelApp-environment.h"; sourceTree = "<group>"; };
+		59A94C6828BECEFB42B99DEC /* Novocaine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Novocaine.h; path = Novocaine/Novocaine.h; sourceTree = "<group>"; };
+		5D30F3FC086CB335A64D64BE /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-EEEManualLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		5F91A3D895FF9FDD01C8C185 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		602A748E7E480C17686D6754 /* UIView+EEEManualLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+EEEManualLayout.h"; path = "Classes/UIView+EEEManualLayout.h"; sourceTree = "<group>"; };
+		6343D5A2EE35F71606D3CC8D /* Novocaine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Novocaine.m; path = Novocaine/Novocaine.m; sourceTree = "<group>"; };
+		6443E823C005E55952CAED3B /* AudioFileReader.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = AudioFileReader.mm; path = Novocaine/AudioFileReader.mm; sourceTree = "<group>"; };
+		7A973209438668B6A997684A /* Pods-vogelApp-Novocaine-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-Novocaine-Private.xcconfig"; sourceTree = "<group>"; };
+		87774373F9F5352B00E76E40 /* RingBuffer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RingBuffer.mm; path = Novocaine/RingBuffer.mm; sourceTree = "<group>"; };
+		88161EDC7988E69CEEE3B942 /* Pods-vogelApp-EEEManualLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-vogelApp-EEEManualLayout-prefix.pch"; sourceTree = "<group>"; };
+		8CEF7356E0F60764958CD070 /* EEEManualLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EEEManualLayout.m; path = Classes/EEEManualLayout.m; sourceTree = "<group>"; };
+		95AC5FB5C1F2C9C208FAC949 /* Pods-vogelApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-vogelApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		A291AE23E9E4844B8556DE2B /* Pods-vogelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp.release.xcconfig"; sourceTree = "<group>"; };
+		A5B61D6F169332597884905A /* Pods-vogelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AB6A72734E9BFC959A240D4E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		B0DDBF43B460E185AF27EA31 /* Pods-vogelApp-EEEManualLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-vogelApp-EEEManualLayout.xcconfig"; sourceTree = "<group>"; };
+		B62ED019AC5BF03C8104E89A /* EEEManualLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EEEManualLayout.h; path = Classes/EEEManualLayout.h; sourceTree = "<group>"; };
+		BAA6FBF23A2A51C684EC784A /* AudioFileWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AudioFileWriter.m; path = Novocaine/AudioFileWriter.m; sourceTree = "<group>"; };
+		BD81F24B88E6E49F3E906266 /* Pods-vogelApp-Novocaine-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-vogelApp-Novocaine-prefix.pch"; sourceTree = "<group>"; };
+		C5706A3CDA388DCAFB9C98DD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C7641AA3150527F8C041AA18 /* RingBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RingBuffer.h; path = Novocaine/RingBuffer.h; sourceTree = "<group>"; };
+		D25578D5FFD83F10F14E1846 /* AudioFileReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioFileReader.h; path = Novocaine/AudioFileReader.h; sourceTree = "<group>"; };
+		E2D28A187DD568D64FB4C842 /* Pods-vogelApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-vogelApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E4917BE3E3E9947AE5625DA8 /* libPods-vogelApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E546FC9E3105D51BA20CD06C /* AudioFileWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioFileWriter.h; path = Novocaine/AudioFileWriter.h; sourceTree = "<group>"; };
+		E9D4877246757AC5C1D517B3 /* Pods-vogelApp-Novocaine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-vogelApp-Novocaine-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6758F83E290D2D418F182D2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3814D642D6C2F313954B0C /* Accelerate.framework in Frameworks */,
+				37635FDAB8008434999800A3 /* AudioToolbox.framework in Frameworks */,
+				CA5A135B561A263A0A6EFB27 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		759FA2FDE59BD43191F1AF1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1175139AD7D55EE2D3E18BC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C05AC894B77547D05AABD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7F0B6128E39F406D668A39 /* Foundation.framework in Frameworks */,
+				AB8DF5351B3962A521B6274B /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		058601B009EB61A1D876E9C7 /* Pods-vogelApp */ = {
+			isa = PBXGroup;
+			children = (
+				E2D28A187DD568D64FB4C842 /* Pods-vogelApp-acknowledgements.markdown */,
+				95AC5FB5C1F2C9C208FAC949 /* Pods-vogelApp-acknowledgements.plist */,
+				103034F8A2E47C2178DC9249 /* Pods-vogelApp-dummy.m */,
+				50CC56EC30DC350177D7FB64 /* Pods-vogelApp-environment.h */,
+				236B003CE26BC12CF9172EC5 /* Pods-vogelApp-resources.sh */,
+				A5B61D6F169332597884905A /* Pods-vogelApp.debug.xcconfig */,
+				A291AE23E9E4844B8556DE2B /* Pods-vogelApp.release.xcconfig */,
+			);
+			name = "Pods-vogelApp";
+			path = "Target Support Files/Pods-vogelApp";
+			sourceTree = "<group>";
+		};
+		2D804C4FDBC6F19599CD2DAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				949A9C5191B1474E92E5CF8A /* EEEManualLayout */,
+				715A2589CAEB0A5F5ADF6133 /* Novocaine */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		38A7AACD5747644AA0844015 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15EA063DA1E0862D10C870C7 /* Pods-vogelApp-Novocaine.xcconfig */,
+				7A973209438668B6A997684A /* Pods-vogelApp-Novocaine-Private.xcconfig */,
+				E9D4877246757AC5C1D517B3 /* Pods-vogelApp-Novocaine-dummy.m */,
+				BD81F24B88E6E49F3E906266 /* Pods-vogelApp-Novocaine-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-vogelApp-Novocaine";
+			sourceTree = "<group>";
+		};
+		4E65E41C48A08218CBD57B70 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				058601B009EB61A1D876E9C7 /* Pods-vogelApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		715A2589CAEB0A5F5ADF6133 /* Novocaine */ = {
+			isa = PBXGroup;
+			children = (
+				D25578D5FFD83F10F14E1846 /* AudioFileReader.h */,
+				6443E823C005E55952CAED3B /* AudioFileReader.mm */,
+				E546FC9E3105D51BA20CD06C /* AudioFileWriter.h */,
+				BAA6FBF23A2A51C684EC784A /* AudioFileWriter.m */,
+				59A94C6828BECEFB42B99DEC /* Novocaine.h */,
+				6343D5A2EE35F71606D3CC8D /* Novocaine.m */,
+				C7641AA3150527F8C041AA18 /* RingBuffer.h */,
+				87774373F9F5352B00E76E40 /* RingBuffer.mm */,
+				38A7AACD5747644AA0844015 /* Support Files */,
+			);
+			name = Novocaine;
+			path = Novocaine;
+			sourceTree = "<group>";
+		};
+		7E1329C6E41C44146D312CC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4917BE3E3E9947AE5625DA8 /* libPods-vogelApp.a */,
+				0F535AB173DF620AD127D212 /* libPods-vogelApp-EEEManualLayout.a */,
+				3F5A68D6386E35AFBEC889F6 /* libPods-vogelApp-Novocaine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		949A9C5191B1474E92E5CF8A /* EEEManualLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B62ED019AC5BF03C8104E89A /* EEEManualLayout.h */,
+				8CEF7356E0F60764958CD070 /* EEEManualLayout.m */,
+				602A748E7E480C17686D6754 /* UIView+EEEManualLayout.h */,
+				099B514A3137282152685FD9 /* UIView+EEEManualLayout.m */,
+				D2DBE55382D3141A92092E20 /* Support Files */,
+			);
+			name = EEEManualLayout;
+			path = EEEManualLayout;
+			sourceTree = "<group>";
+		};
+		9B5F8EFE6DC4F5FE92F4F5D2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AB6A72734E9BFC959A240D4E /* Accelerate.framework */,
+				5F91A3D895FF9FDD01C8C185 /* AudioToolbox.framework */,
+				08B77EE54F8F2F106F2D6759 /* Foundation.framework */,
+				2E3B4B7529726E15FE98380A /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D2DBE55382D3141A92092E20 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0DDBF43B460E185AF27EA31 /* Pods-vogelApp-EEEManualLayout.xcconfig */,
+				5D30F3FC086CB335A64D64BE /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */,
+				3239D66108AA65B0921007C1 /* Pods-vogelApp-EEEManualLayout-dummy.m */,
+				88161EDC7988E69CEEE3B942 /* Pods-vogelApp-EEEManualLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-vogelApp-EEEManualLayout";
+			sourceTree = "<group>";
+		};
+		E0EE64B0122B69D02CA33CBB = {
+			isa = PBXGroup;
+			children = (
+				C5706A3CDA388DCAFB9C98DD /* Podfile */,
+				ED49746C37613D1910A97BAE /* Frameworks */,
+				2D804C4FDBC6F19599CD2DAC /* Pods */,
+				7E1329C6E41C44146D312CC5 /* Products */,
+				4E65E41C48A08218CBD57B70 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ED49746C37613D1910A97BAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B5F8EFE6DC4F5FE92F4F5D2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3776F779D1B1B5265D286331 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9A2EC7DD4FD14024EE84F8 /* EEEManualLayout.h in Headers */,
+				E87D5BE186E61DEC37A942B1 /* UIView+EEEManualLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592680D2072B54856A93FCF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F05B10ACB296494E4197BF58 /* AudioFileReader.h in Headers */,
+				3F4C3A71609E8DEC570DE1E6 /* AudioFileWriter.h in Headers */,
+				863F6E4A40607C8C2E81975A /* Novocaine.h in Headers */,
+				475B4F5474A9936C84F8A354 /* RingBuffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		828007BF9C6E83429747AF94 /* Pods-vogelApp-Novocaine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96C630767FA5B0C0662C8484 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-Novocaine" */;
+			buildPhases = (
+				64BE3D858435A420E7DB4A29 /* Sources */,
+				6758F83E290D2D418F182D2E /* Frameworks */,
+				592680D2072B54856A93FCF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-vogelApp-Novocaine";
+			productName = "Pods-vogelApp-Novocaine";
+			productReference = 3F5A68D6386E35AFBEC889F6 /* libPods-vogelApp-Novocaine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DBE2D68DF61C482598A1D1FD /* Pods-vogelApp-EEEManualLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD29571A0D5BF5E23496C948 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-EEEManualLayout" */;
+			buildPhases = (
+				DD4A0BBD822452FE696877DD /* Sources */,
+				B0C05AC894B77547D05AABD3 /* Frameworks */,
+				3776F779D1B1B5265D286331 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-vogelApp-EEEManualLayout";
+			productName = "Pods-vogelApp-EEEManualLayout";
+			productReference = 0F535AB173DF620AD127D212 /* libPods-vogelApp-EEEManualLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EBAAF5E6D448D6F79AF3AC12 /* Pods-vogelApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE27D053AF919BD20B2F8230 /* Build configuration list for PBXNativeTarget "Pods-vogelApp" */;
+			buildPhases = (
+				1787E133111CBAD7A1282FC0 /* Sources */,
+				759FA2FDE59BD43191F1AF1F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDC15E21558088825A43889E /* PBXTargetDependency */,
+				74551BC0A33C1C7EF39DD98D /* PBXTargetDependency */,
+			);
+			name = "Pods-vogelApp";
+			productName = "Pods-vogelApp";
+			productReference = E4917BE3E3E9947AE5625DA8 /* libPods-vogelApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E103E51786012CE87B5B7C44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 27486773E9AF6716B3FFE8B8 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E0EE64B0122B69D02CA33CBB;
+			productRefGroup = 7E1329C6E41C44146D312CC5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				EBAAF5E6D448D6F79AF3AC12 /* Pods-vogelApp */,
+				DBE2D68DF61C482598A1D1FD /* Pods-vogelApp-EEEManualLayout */,
+				828007BF9C6E83429747AF94 /* Pods-vogelApp-Novocaine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1787E133111CBAD7A1282FC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1CEDDF851F4CE5F13457280 /* Pods-vogelApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64BE3D858435A420E7DB4A29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0234BC27D5AC9BE56A0F1520 /* AudioFileReader.mm in Sources */,
+				B1D6DCD0ABCC727CC094028D /* AudioFileWriter.m in Sources */,
+				54ABF503FED9FE6DA733BA82 /* Novocaine.m in Sources */,
+				78882C42B8F86106C85C7CB5 /* Pods-vogelApp-Novocaine-dummy.m in Sources */,
+				2B05ABAD3391F41A4A248BD6 /* RingBuffer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4A0BBD822452FE696877DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735F02D63A30F215774DCEB4 /* EEEManualLayout.m in Sources */,
+				90DB8A0F0BB9F5A731F1F3E5 /* Pods-vogelApp-EEEManualLayout-dummy.m in Sources */,
+				3B768E3822F35B4C2B959C59 /* UIView+EEEManualLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74551BC0A33C1C7EF39DD98D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828007BF9C6E83429747AF94 /* Pods-vogelApp-Novocaine */;
+			targetProxy = EB83FBB6F262129F511F9B86 /* PBXContainerItemProxy */;
+		};
+		EDC15E21558088825A43889E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE2D68DF61C482598A1D1FD /* Pods-vogelApp-EEEManualLayout */;
+			targetProxy = B497825843C698292B8FEB3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015B07D947B27BD2C27D792C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		1D71036DDF4F2B6E6F3FFF6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A291AE23E9E4844B8556DE2B /* Pods-vogelApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E0732DCABFFB392A5F4966A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RELEASE=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		511E189B0AD6803E98893398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D30F3FC086CB335A64D64BE /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9828107C6F094F3E520D331B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5B61D6F169332597884905A /* Pods-vogelApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CA5684DB3D4ECA45F13C967F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D30F3FC086CB335A64D64BE /* Pods-vogelApp-EEEManualLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-EEEManualLayout/Pods-vogelApp-EEEManualLayout-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9D86EE4B51DF3FD0AA1BDB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A973209438668B6A997684A /* Pods-vogelApp-Novocaine-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-Novocaine/Pods-vogelApp-Novocaine-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FE949EA3DEE6DB5455936978 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A973209438668B6A997684A /* Pods-vogelApp-Novocaine-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-vogelApp-Novocaine/Pods-vogelApp-Novocaine-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27486773E9AF6716B3FFE8B8 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015B07D947B27BD2C27D792C /* Debug */,
+				2E0732DCABFFB392A5F4966A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96C630767FA5B0C0662C8484 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-Novocaine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D86EE4B51DF3FD0AA1BDB4 /* Debug */,
+				FE949EA3DEE6DB5455936978 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD29571A0D5BF5E23496C948 /* Build configuration list for PBXNativeTarget "Pods-vogelApp-EEEManualLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA5684DB3D4ECA45F13C967F /* Debug */,
+				511E189B0AD6803E98893398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE27D053AF919BD20B2F8230 /* Build configuration list for PBXNativeTarget "Pods-vogelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9828107C6F094F3E520D331B /* Debug */,
+				1D71036DDF4F2B6E6F3FFF6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E103E51786012CE87B5B7C44 /* Project object */;
+}

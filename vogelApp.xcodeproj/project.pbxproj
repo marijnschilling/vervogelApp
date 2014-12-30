@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362F478372F55C5A94D7538C /* libPods-vogelApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8ED9E5E1E7DC167545DC999 /* libPods-vogelApp.a */; };
+		D197BE18F5035012FB579F60 /* VideoPlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D197B3A0F6E543EE8DEFDFA3 /* VideoPlayViewController.mm */; };
+		E60DACD11A35FEFD00F4FB4E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60DACD01A35FEFD00F4FB4E /* AVFoundation.framework */; };
+		E60DACD31A35FF8900F4FB4E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60DACD21A35FF8900F4FB4E /* AVKit.framework */; };
+		E60DACD51A3605C800F4FB4E /* bird_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E60DACD41A3605C800F4FB4E /* bird_1.wav */; };
 		E67ED30B1A1A886400A45F34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED30A1A1A886400A45F34 /* main.m */; };
 		E67ED30E1A1A886400A45F34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED30D1A1A886400A45F34 /* AppDelegate.m */; };
-		E67ED3111A1A886400A45F34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3101A1A886400A45F34 /* ViewController.m */; };
-		E67ED3141A1A886400A45F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3121A1A886400A45F34 /* Main.storyboard */; };
+		E67ED3111A1A886400A45F34 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3101A1A886400A45F34 /* RootViewController.mm */; };
 		E67ED3161A1A886400A45F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3151A1A886400A45F34 /* Images.xcassets */; };
-		E67ED3191A1A886400A45F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E67ED3171A1A886400A45F34 /* LaunchScreen.xib */; };
 		E67ED3251A1A886400A45F34 /* vogelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E67ED3241A1A886400A45F34 /* vogelAppTests.m */; };
+		E67ED32F1A1A957E00A45F34 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */; };
+		E6E483A61A1BD28F0057EE69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */; };
+		E6E483AA1A1BD5840057EE69 /* splashsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E483A91A1BD5840057EE69 /* splashsmall.png */; };
+		E6E483AC1A1BD6430057EE69 /* iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +34,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0C6FA692711ADBBB5F22E48 /* Pods-vogelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vogelApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vogelApp/Pods-vogelApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B2485F13CFDA3B0FA766E550 /* Pods-vogelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vogelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-vogelApp/Pods-vogelApp.release.xcconfig"; sourceTree = "<group>"; };
+		C8ED9E5E1E7DC167545DC999 /* libPods-vogelApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vogelApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D197B283950C98C24D2209A2 /* VideoPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayViewController.h; sourceTree = "<group>"; };
+		D197B3A0F6E543EE8DEFDFA3 /* VideoPlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayViewController.mm; sourceTree = "<group>"; };
+		E60DACD01A35FEFD00F4FB4E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E60DACD21A35FF8900F4FB4E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		E60DACD41A3605C800F4FB4E /* bird_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bird_1.wav; path = "../../../Documents/Vervogel app/vertraagde vogels wav/bird_1.wav"; sourceTree = "<group>"; };
 		E67ED3051A1A886400A45F34 /* vogelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vogelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67ED3091A1A886400A45F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67ED30A1A1A886400A45F34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E67ED30C1A1A886400A45F34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E67ED30D1A1A886400A45F34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E67ED30F1A1A886400A45F34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E67ED3101A1A886400A45F34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E67ED3131A1A886400A45F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E67ED30F1A1A886400A45F34 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E67ED3101A1A886400A45F34 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
 		E67ED3151A1A886400A45F34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E67ED3181A1A886400A45F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E67ED31E1A1A886400A45F34 /* vogelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vogelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67ED3231A1A886400A45F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67ED3241A1A886400A45F34 /* vogelAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vogelAppTests.m; sourceTree = "<group>"; };
+		E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E6E483A51A1BD28F0057EE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E6E483A91A1BD5840057EE69 /* splashsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splashsmall.png; path = "../../../Documents/Vervogel app/splashsmall.png"; sourceTree = "<group>"; };
+		E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iphone5@2x.png"; path = "../../../Documents/Vervogel app/iphone5@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60DACD31A35FF8900F4FB4E /* AVKit.framework in Frameworks */,
+				E60DACD11A35FEFD00F4FB4E /* AVFoundation.framework in Frameworks */,
+				E67ED32F1A1A957E00A45F34 /* MediaPlayer.framework in Frameworks */,
+				362F478372F55C5A94D7538C /* libPods-vogelApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +81,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CE2730B392F7976FEB240BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60DACD21A35FF8900F4FB4E /* AVKit.framework */,
+				E60DACD01A35FEFD00F4FB4E /* AVFoundation.framework */,
+				C8ED9E5E1E7DC167545DC999 /* libPods-vogelApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84484C01E6F1A124DDFDEFC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0C6FA692711ADBBB5F22E48 /* Pods-vogelApp.debug.xcconfig */,
+				B2485F13CFDA3B0FA766E550 /* Pods-vogelApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E67ED2FC1A1A886400A45F34 = {
 			isa = PBXGroup;
 			children = (
+				E67ED32E1A1A957E00A45F34 /* MediaPlayer.framework */,
 				E67ED3071A1A886400A45F34 /* vogelApp */,
 				E67ED3211A1A886400A45F34 /* vogelAppTests */,
 				E67ED3061A1A886400A45F34 /* Products */,
+				84484C01E6F1A124DDFDEFC0 /* Pods */,
+				0CE2730B392F7976FEB240BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +124,18 @@
 		E67ED3071A1A886400A45F34 /* vogelApp */ = {
 			isa = PBXGroup;
 			children = (
+				E60DACD41A3605C800F4FB4E /* bird_1.wav */,
+				E6E483AB1A1BD6430057EE69 /* iphone5@2x.png */,
+				E6E483A91A1BD5840057EE69 /* splashsmall.png */,
 				E67ED30C1A1A886400A45F34 /* AppDelegate.h */,
 				E67ED30D1A1A886400A45F34 /* AppDelegate.m */,
-				E67ED30F1A1A886400A45F34 /* ViewController.h */,
-				E67ED3101A1A886400A45F34 /* ViewController.m */,
-				E67ED3121A1A886400A45F34 /* Main.storyboard */,
+				E67ED30F1A1A886400A45F34 /* RootViewController.h */,
+				E67ED3101A1A886400A45F34 /* RootViewController.mm */,
+				E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */,
 				E67ED3151A1A886400A45F34 /* Images.xcassets */,
-				E67ED3171A1A886400A45F34 /* LaunchScreen.xib */,
 				E67ED3081A1A886400A45F34 /* Supporting Files */,
+				D197B3A0F6E543EE8DEFDFA3 /* VideoPlayViewController.mm */,
+				D197B283950C98C24D2209A2 /* VideoPlayViewController.h */,
 			);
 			path = vogelApp;
 			sourceTree = "<group>";
@@ -126,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E67ED3281A1A886400A45F34 /* Build configuration list for PBXNativeTarget "vogelApp" */;
 			buildPhases = (
+				4204CF52A144CE4A30CFF4C3 /* Check Pods Manifest.lock */,
 				E67ED3011A1A886400A45F34 /* Sources */,
 				E67ED3021A1A886400A45F34 /* Frameworks */,
 				E67ED3031A1A886400A45F34 /* Resources */,
+				B4BC9481EFD1F95BADB7154F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67ED3141A1A886400A45F34 /* Main.storyboard in Resources */,
-				E67ED3191A1A886400A45F34 /* LaunchScreen.xib in Resources */,
+				E6E483A61A1BD28F0057EE69 /* LaunchScreen.xib in Resources */,
+				E6E483AA1A1BD5840057EE69 /* splashsmall.png in Resources */,
 				E67ED3161A1A886400A45F34 /* Images.xcassets in Resources */,
+				E60DACD51A3605C800F4FB4E /* bird_1.wav in Resources */,
+				E6E483AC1A1BD6430057EE69 /* iphone5@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +265,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4204CF52A144CE4A30CFF4C3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4BC9481EFD1F95BADB7154F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vogelApp/Pods-vogelApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E67ED3011A1A886400A45F34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67ED3111A1A886400A45F34 /* ViewController.m in Sources */,
+				E67ED3111A1A886400A45F34 /* RootViewController.mm in Sources */,
 				E67ED30E1A1A886400A45F34 /* AppDelegate.m in Sources */,
 				E67ED30B1A1A886400A45F34 /* main.m in Sources */,
+				D197BE18F5035012FB579F60 /* VideoPlayViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,18 +329,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E67ED3121A1A886400A45F34 /* Main.storyboard */ = {
+		E6E483A41A1BD28F0057EE69 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E67ED3131A1A886400A45F34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E67ED3171A1A886400A45F34 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E67ED3181A1A886400A45F34 /* Base */,
+				E6E483A51A1BD28F0057EE69 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -341,21 +418,25 @@
 		};
 		E67ED3291A1A886400A45F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C6FA692711ADBBB5F22E48 /* Pods-vogelApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vogelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		E67ED32A1A1A886400A45F34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2485F13CFDA3B0FA766E550 /* Pods-vogelApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = vogelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -412,6 +493,7 @@
 				E67ED32A1A1A886400A45F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E67ED32B1A1A886400A45F34 /* Build configuration list for PBXNativeTarget "vogelAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +502,7 @@
 				E67ED32D1A1A886400A45F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
