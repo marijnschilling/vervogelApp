@@ -72,6 +72,7 @@
 
     self.playButtonLabel = [[UILabel alloc] init];
     self.playButtonLabel.text = @"Play >>>";
+    self.playButtonLabel.textColor = [UIColor whiteColor];
     [self.playButtonLabel sizeToFit];
     self.playButtonLabel.frame = CGRectMake(self.view.bounds.size.width/2- self.playButtonLabel.frame.size.width/2, self.view.bounds.size.height/2- self.playButtonLabel.frame.size.height/2, self.playButtonLabel.frame.size.width, self.playButtonLabel.frame.size.height);
 
@@ -104,7 +105,5 @@
     [self.fileReader pause];
     self.audioManager.outputBlock = nil;
 }
-
-
 
 @end
