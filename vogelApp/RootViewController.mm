@@ -85,6 +85,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+
     [super viewWillAppear:animated];
 
     [self.recordLabel setHidden:NO];
